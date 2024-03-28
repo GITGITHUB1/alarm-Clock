@@ -1,4 +1,4 @@
-console.log("Welcome to Alarm clock");
+
 let submit = document.getElementById('submit');
 submit.addEventListener('click', (e) => {
     e.preventDefault();
@@ -17,17 +17,19 @@ submit.addEventListener('click', (e) => {
     let secondDiff = alarmDate - now;
     console.log(secondDiff);
     function alarmTick() {
-        var audio = new Audio('https://mobcup.net/ringtone/veer-zaara-movie-ysakxs5a');
+        var audio = new Audio(
+          'https://freesound.org/data/previews/316/316847_4939433-lq.mp3');
         audio.play();
          setInterval(() => {
-             var audio = new Audio('https://mobcup.net/ringtone/veer-zaara-movie-ysakxs5a');
+             var audio = new Audio('https://freesound.org/data/previews/316/316847_4939433-lq.mp3');
              audio.play();
-         }, 15000);
+         }, 6000);
     }
     if (secondDiff >= 0) {
 
         setTimeout(alarmTick,secondDiff);
     }
+
 
 });
 
